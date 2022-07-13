@@ -28,5 +28,22 @@ class Person {
 
 let person = new Person('Bob')
 
-person.printNameArrow()
-person.printNameFunction()
+// person.printNameArrow()
+// person.printNameFunction()
+
+let p = new Promise((resolve, reject) => {
+    let a = 1 + 2;
+    if (a === 2) {
+        resolve('success');
+    } else {
+        reject('failed');
+    }
+})
+
+p.then((message) => {
+    console.log('then message: ' + message);
+}).catch((message) => {
+    console.log('catch message: ' + message)
+})
+
+
